@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    justify-content:space-between;
+    height: 90px;
+    margin-bottom: 200px;
+   
+}
+.logoimage, .navigation{
+    flex-direction: row;     
+}
+.logoimage{
+    height: 150px;
+    margin-top: -10px;
+}
+.navigation{
+    margin-top: 50px;
+}
+
+

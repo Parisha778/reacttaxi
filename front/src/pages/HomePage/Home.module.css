@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+.home{
+    font-family: Arial; 
+    display: flex;
+    margin-top: 100px;
+
+}
+
+.side, .contenu {
+    flex-direction: column;
+    
+}
+h1{
+    box-shadow: 0 0 100px rgba(43, 44, 45, 0.7);
+   
+
+}
+.img1{
+    width: 500px;
+    margin-right: 20px;
+    box-shadow: 0 0 100px rgba(41,44,135,0.7);
+   
+}
+.button{
+    margin-top: 200px;
+    box-shadow: 0 0 100px rgba(41,44,135,0.7);
+   
+}

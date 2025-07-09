@@ -1,0 +1,29 @@
+
+.footer{
+   margin-top: 400px; 
+   font-family: Arial;
+}
+.text{
+    display: block;
+    justify-self: auto;
+    margin-left: 20px;
+}
+
+.reseau{
+    margin-top:50px;
+    height: 50px;
+    display:inline-flex;   
+    
+}
+
+.icon{
+    display: flex;
+    margin-left: 20px; 
+    height: 40px;
+    width: auto;
+    align-items: center; 
+    box-shadow: 0 0 100px rgba(41,44,135,0.8);     
+}
+
+
+    
