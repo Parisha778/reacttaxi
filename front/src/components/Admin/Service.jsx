@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import {BiHome, BiPen,BiMinusCircle,BiPlusCircle} from 'react-icons/bi'
 //CSS
-import styles from './Course.module.css';
+import styles from './Reservation.module.css';
 
 function Service() {
   return (
@@ -20,7 +20,7 @@ function Service() {
       </div>
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input"/>
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <label class="form-check-label" for="exampleCheck1">Êtes-vous sûr</label>
       </div>
       <button type="submit" class="btn btn-primary mt-1 mb-4 ms-5">Ajouter</button>
       </form>
@@ -131,14 +131,7 @@ function Service() {
       </td>
     </tr>  
   </tbody>
-  </table> 
-  <div className={styles.ajouter}>
-   <div className={styles.action}></div>
-    <Link to="/course/ajouter" className={styles.item}>
-            <BiPlusCircle className={styles.icon}/>
-    </Link>
-    <h6 className="mb-4">Ajouter un service</h6> 
-    </div>
+  </table>
   </div> 
 </> 
   )

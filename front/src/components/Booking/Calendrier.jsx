@@ -5,7 +5,7 @@ import DateTimePicker from 'react-datetime-picker';
 //css
 import 'react-datepicker/dist/react-datepicker.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from './Reservation.module.css';
+import styles from './Calendrier.module.css';
 import {BiHome, BiCalendar} from 'react-icons/bi'
 
 
@@ -22,7 +22,7 @@ return(
   </div>
 );
 }
-function Reservation() {
+function Calendrier() {
     const [selectedDate,setDate]= useState(null);
   return (
     <>
@@ -42,4 +42,4 @@ function Reservation() {
   );
 }
 
-export default Reservation
+export default Calendrier

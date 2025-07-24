@@ -1,5 +1,5 @@
 import React from 'react';
-import Reservation from './Reservation';
+import Calendrier from './Calendrier';
 
 //CSS
 import styles from './Booking.module.css';
@@ -26,7 +26,7 @@ function Booking() {
   <textarea class="form-control" aria-label="With textarea"></textarea>
   </div>
   <div className={styles.date}>
-  <Reservation/> 
+  <Calendrier/> 
   </div>
   <div class="d-flex">
   <button class="btn btn-secondary mt-5" type="button">Réserver</button>

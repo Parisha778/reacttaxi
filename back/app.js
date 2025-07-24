@@ -8,7 +8,7 @@ const app = express();
 // IMPORT ROUTES
 const userRouter = require('./router/user.router.js');
 const serviceRouter = require('./router/service.router.js');
-const courseRouter = require('./router/course.router.js');
+const ReservationRouter = require('./router/reservation.router.js');
 
 
 // CONNEXION MONGO

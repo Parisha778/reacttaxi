@@ -30,9 +30,9 @@ const Sidebar=()=> {
             </Link>
         </div>
         <div className={styles.menuList}>
-            <Link to="/dashbord/course" className={styles.item}>
+            <Link to="/dashbord/reservation" className={styles.item}>
             <BiMap className={styles.icon}/>
-            Course
+            Réservation
             </Link>
         </div>
         <div className={styles.menuList}>

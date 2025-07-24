@@ -33,4 +33,4 @@ const userSchema = mongoose.Schema(
   } ,  { timestamps: { createdAt: true}}
 )
 
-module.exports = mongoose.model('Course', courseSchema)
+module.exports = mongoose.model('Reservation', reservationSchema)

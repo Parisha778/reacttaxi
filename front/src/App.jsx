@@ -7,10 +7,8 @@ import Layout from './components/Layout/Layout';
 import DashbordLayout from './components/Admin/DashbordLayout';
 import Sidebar from './components/Admin/Sidebar';
 import Service from './components/Admin/Service';
-import Course from './components/Admin/Course';
+import Reservation from './components/Admin/Reservation';
 import Membre from './components/Admin/Membre';
-import CourseModifier from './components/Admin/CourseModifier';
-import CourseSuprimer from './components/Admin/CourseSuprimer';
 import Contact from './pages/Contact/Contact';
 import Connexion from './pages/Authentification/Connexion';
 import Inscription from './pages/Authentification/register';
@@ -32,13 +30,9 @@ function App() {
     <Route element={<DashbordLayout/>}>
         <Route path="/dashbord" element={<Service/>}/>
         <Route path="/dashbord/service" element={<Service/>}/> 
-        <Route path="/dashbord/course" element={<Course/>}/>
+        <Route path="/dashbord/reservation" element={<Reservation/>}/>
         <Route path="/dashbord/membre" element={<Membre/>}/>
-        <Route path="/course/modifier" element={<CourseModifier/>}/>
-        <Route path="/course/suprimer" element={<CourseSuprimer/>}/>
-        <Route path="/service" element={<Service/>}/>
-        <Route path="/course" element={<Course/>}/>
-        
+        <Route path="/service" element={<Service/>}/>     
         <Route path="/" element={<Home/>}/>  
     </Route>
 
