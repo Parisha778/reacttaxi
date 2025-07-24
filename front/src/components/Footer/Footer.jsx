@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
 import { Link } from 'react-router';
 
 //IMAGE
@@ -24,7 +23,7 @@ const Footer = () => {
           <div className="footer-text">
           <Link className="link">Copyright 2025</Link>         
           </div>
-        </div> 
+        </div>   
     </footer>    
   );
 };

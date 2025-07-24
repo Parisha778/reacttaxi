@@ -1,0 +1,16 @@
+.item{
+   display:flex;
+
+}
+.icon{
+    font-size: 2rem;
+}
+.action{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.ajouter{
+    display: block;
+    justify-items: center;
+}

@@ -1,44 +1,39 @@
-import React from 'react';
-import { useState,useEffect } from 'react';
+import React from 'react'
+import { Link } from 'react-router'
+import {BiPhone, BiLogoWhatsapp,BiLogoFacebook,BiMailSend} from 'react-icons/bi'
 
-//IMAGE
-import Iconphone from '../../assets/images/icontelephone.jpeg';
-import Iconwatsapp from '../../assets/images/iconwasap.png';
-import Iconmail from '../../assets/images/iconmail.png';
-import Iconfacebook from '../../assets/images/iconfacebook.png';
-import Iconline from '../../assets/images/iconline.png';
-
-//CSS
+import Logoimage from '../../assets/images/logo1.png';
 import styles from './Contact.module.css';
 
-const Contact = () => {
+const Contact=()=> {
   return (
-  <>
-  <h2 className="title">Contactez-nous</h2>
-  <div className="containeur"> 
-    <div className="contact1">
-      <img className={styles.image} src="../images/icontelephone.jpeg" alt=""/>
-      <a  className="text" href="#">+33 2 45 65 83 83</a>
+    <div className={styles.containeur}>
+       <h4 className={styles.title}>Nos Contact</h4>
+        <div className={styles.menuList}>
+            <Link to="/" className={styles.item}>
+            <BiPhone className={styles.icon}/>    
+            Contactez nous par Téléphone au 09 99 78 89 00
+            </Link>
+        </div>
+        <div className={styles.menuList}>
+            <Link to="/" className={styles.item}>
+            <BiLogoWhatsapp className={styles.icon}/>
+            Contactez nous par Wassap
+            </Link>
+        </div>
+        <div className={styles.menuList}>
+            <Link to="/" className={styles.item}>
+            <BiLogoFacebook className={styles.icon}/>
+            Contactez nous par Facebook
+            </Link>
+        </div>
+        <div className={styles.menuList}>
+            <Link to="/" className={styles.item}>
+            <BiMailSend className={styles.icon}/>
+            Contactez nous par E- mail 
+            </Link>
+        </div>
     </div>
-    <div className="contact1">
-      <img className={styles.image} src="../images/iconwasap.png" alt=""/>
-      <a className="text" href="#">Contactez-nous par Wasapp</a>
-    </div>
-    <div className="contact1">
-      <img className={styles.image} src="../images/iconmail.png" alt=""/>
-      <a className="text" href="#">Contactez-nous par Email</a>
-    </div>
-    
-    <div className="contact1">
-      <img className={styles.image} src="../images/icon facebook.png" alt=""/>
-      <a className="text" href="#">Contactez-nous par Facebook</a>
-    </div>
-    <div className="contact1">
-      <img className={styles.image} src="../images/iconline.png" alt=""/>
-      <a className="text" href="#">Contactez-nous par Line</a>
-    </div>
-  </div>
-</>
   )
 }
 

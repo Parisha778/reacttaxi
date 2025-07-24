@@ -1,0 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+.input{
+    background-color: white;
+    width:340px;
+    height: 48px;
+    margin-left: 3Opx;
+}
+.icon{
+    font-size:3rem;
+}

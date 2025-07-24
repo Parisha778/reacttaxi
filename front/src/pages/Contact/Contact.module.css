@@ -1,0 +1,21 @@
+.containeur{
+        width: 100%;
+        margin: auto;        
+        display:block;
+        justify-items: center;
+      }
+
+      .title{
+        padding-bottom: 60px;
+        padding-left: 70px;
+      }
+      .icon {
+    font-size: 3rem;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    padding-right: 10px
+    
+      }
+      .icon:hover{
+     font-size: 4rem;
+      }

@@ -1,24 +1,42 @@
 *{
     box-sizing: border-box;
+    
 }
+.container{
+    width: 100vw ;
+    height: 180vh;
+    margin-left: 4%;
+    padding-right: 10%;
+}
+
 .home{
     font-family: Arial; 
     display: flex;
     margin-top: 100px;
 
 }
+.title{
+    display: block;
+    background-color:#27374d;
+    border-radius: 10px;
+    color: #FFF;
+    padding-left: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
 
 .side, .contenu {
     flex-direction: column;
     
 }
-h1{
-    box-shadow: 0 0 100px rgba(43, 44, 45, 0.7);
-   
-
+.lead{
+    margin-top: 20px;
 }
+    
 .img1{
     width: 500px;
+    height: 350px;
     margin-right: 20px;
     box-shadow: 0 0 100px rgba(41,44,135,0.7);
    
@@ -28,3 +46,13 @@ h1{
     box-shadow: 0 0 100px rgba(41,44,135,0.7);
    
 }
+@media screen and (max-width: 768px){
+    .home{
+        flex-direction: column;    
+    }
+    .lead{
+        margin-top: 60px;
+    }
+    
+}
+    

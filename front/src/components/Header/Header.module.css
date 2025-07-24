@@ -1,12 +1,9 @@
 *{
     box-sizing: border-box;
 }
-.header {
-    display: flex;
-    justify-content:space-between;
-    height: 90px;
-    margin-bottom: 200px;
-   
+.header{
+    margin-bottom: 180px;
+    width: 120%;
 }
 .logoimage, .navigation{
     flex-direction: row;     
@@ -16,7 +13,10 @@
     margin-top: -10px;
 }
 .navigation{
-    margin-top: 50px;
+    margin-top: 16px;
+}
+.item{
+    margin-right: 60px;
 }
 
-
+    

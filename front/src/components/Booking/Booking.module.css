@@ -1,0 +1,35 @@
+.container{
+    margin-top: 100px;
+    margin-bottom: 80px;
+    padding-top: 100px;
+    display: block;
+    justify-items: center;
+    margin-left: 30%;
+    width: 100%;
+}
+.title{
+    display: block;
+    background-color:grey;
+    border-radius: 10px;
+    color: #FFF;
+    padding-left: 38%;
+    padding-right: 38%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    
+}
+button{
+    margin-top: 100px;
+    width:380px;
+    margin-left:-8px;
+}
+.multi{
+    height: 240px;
+    width: 100%;
+    font-size: 20px;
+    color: #27374d;
+    background-color: white;
+    padding-top: 20px;
+    
+}

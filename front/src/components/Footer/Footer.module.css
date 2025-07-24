@@ -1,7 +1,11 @@
-
+*{
+    box-sizing: border-box;
+}
 .footer{
+   margin-left: 30%;
    margin-top: 400px; 
    font-family: Arial;
+   display: flex;
 }
 .text{
     display: block;
@@ -24,6 +28,9 @@
     align-items: center; 
     box-shadow: 0 0 100px rgba(41,44,135,0.8);     
 }
+@media screen and (max-width: 768px){
+    .footer{
+        margin-left:10%;    
+    }
 
-
-    
+}
