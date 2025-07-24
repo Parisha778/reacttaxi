@@ -27,17 +27,13 @@ import { AuthContext } from '../../utilis/context/AuthContext.jsx'
        className="form-control" id="exampleInputEmail1" 
       onChange={handleChange}/>
       </div>
-      <div className='mb-3'>
+      <div>
       <label htmlFor="exampleInputPassword1" className="form-label">Mode de passe</label>
       <input type="password" 
       name="password"
       className="form-control" id="password" 
       onChange={handleChange}/>
       </div>
-      <div className="mb-3 form-check">
-      <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-     <label className="form-check-label" htmlFor="exampleCheck1">Vérifier</label>
-    </div>
    <button type="submit" className="btn btn-primary"> Connecter</button>
   </form>
   <div className='mt-4'>

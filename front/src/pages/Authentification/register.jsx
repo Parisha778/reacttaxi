@@ -50,7 +50,7 @@ return (
       </div>
      <div className="mb-3 form-check">
       <input type="checkbox" className="form-check-input" />
-     <label className="form-check-label" htmlFor="exampleCheck1">Vérifier</label>
+     <label className="form-check-label" htmlFor="exampleCheck1">Accepter la condition générale</label>
     </div>
 
     <button type="submit" className="btn btn-primary">Inscrire</button>
