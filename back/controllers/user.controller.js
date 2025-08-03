@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const ENV = require('../config/env')
-const UsersModel = require('../models/user.model');
+const UsersModel = require('./models/user.model');
 
 const register = async (req, res) => {
  
@@ -14,7 +14,7 @@ const register = async (req, res) => {
       ...req.body,
       password: hashedPassword
      });
-
+     //Si l'utilisateur est créé avec succès ,nous envoyons un status 201
     return res.status(201).json("User has been created!", user);
   } catch (error) {
     return res.status(500).json(error.message)
@@ -57,9 +57,10 @@ const sign = async(req,res)=>{
     res.status(500).json(error.message)
   }
 }
-
+// Fonction pour récupéer tous les users
 const getAllUsers = async (req,res)=>{
   try {
+    //Récupérer tous les users depuis la base de données
     const users = await UsersModel.find();
     res.status(200).json(users);
 
@@ -71,6 +72,8 @@ const getAllUsers = async (req,res)=>{
 
 const getUserById = async (req, res) => {
   try{
+      // On récupe un utilisateurs de base de données 'Model.findById(req.params.id)'
+      //chercher un utilisateur avec l'ID
       const result = await UsersModel.findById(req.params.id);
          
       if(!user) return res.status(404).json("User not found !")
@@ -83,8 +86,9 @@ const getUserById = async (req, res) => {
 
 const deleteUser = async (req, res, next) => {
   try{   
-    const user = await userModel.findById(req.params.id);
-    
+    // Rechercher l'utisateur par son ID
+    const user = await UsersModel.findById(req.params.id);
+    // Vérifier si l'utilisateur existe
     if (!user) return res.status(404).json("User not found.")
     
     await Model.findOneAndDelete(req.params.id)
@@ -94,7 +98,7 @@ const deleteUser = async (req, res, next) => {
 
     return res.status(500).json(error.message)
   }
-}  
+} 
 
 
 const updateUser = async (req, res, next) => {

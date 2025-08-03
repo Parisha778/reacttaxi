@@ -2,11 +2,12 @@ const ServiceModel = require('../models/service.model.js')
 
 const service = async(req,res) =>{
     try {
-        const service = await ServiceModel.create({
-            ...req.body,
-        });
-        return res.status(201).json("Service has been created !",service);
-    } catch (error) {
+        const service = await ServiceModel.create(req.body,
+        );
+        return res.status(201).json({
+            message:"Service has been created !",
+            service
+    }); } catch (error) {
         return res.status(500).json(error.message)      
     }
 }

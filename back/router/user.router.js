@@ -1,5 +1,7 @@
+//Importation du module express
 const express = require('express');
 
+//Creation d'un router express
 const router = express.Router();
 
 // Importer le controller

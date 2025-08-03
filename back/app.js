@@ -20,8 +20,9 @@ app.use(cookieParser());
 app.use(cors())
 
 // URLS API PREFIX
-app.use("/api/user", userRouter);
-app.use("/api/service", serviceRouter);
+app.use("/api/users", userRouter);
+app.use("/api/services", serviceRouter);
+//app.use("/api/reservatoions",reservationRouter);
 
 // MIDDLEWARE DE GESTION DÉERREURS
 app.use((error, req, res, next) => {
