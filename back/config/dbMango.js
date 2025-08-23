@@ -4,7 +4,7 @@ const connectMongoDB = (mongoURI, dbName) => {
   mongoose
     .connect(mongoURI, {dbName: dbName})
     .then(() => console.log('Connexion  à mongo réussi'))
-    .catch(error => console.log(error))
+    .catch(error => console.log(error.message))
 }
 
 module.exports = connectMongoDB;

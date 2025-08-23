@@ -23,7 +23,7 @@ const handleSubmit = async(event)=>{
 }
 return (
 <>
-<div className="ms-5">
+<div className="container-fluid ms-5 mt-5 d-flex justify-content-center">
 <form onSubmit={handleSubmit}>
     
       <div className="mb-3">
@@ -34,7 +34,7 @@ return (
       onChange={handleChange}/>
       </div>
 
-      <div className="mb-3">
+      <div className="mb-3 mt-4">
       <label htmlFor="exampleInputEmail1" className="form-label">Addresse Mail</label>
       <input type="email"
       name="email"
@@ -42,13 +42,13 @@ return (
       onChange={handleChange}/>
       </div>
     
-     <div className='mb-3'>
+     <div className='mb-3 mt-4'>
       <label htmlFor="exampleInputPassword1" className="form-label">Mode de passe</label>
       <input type="password" className="form-control" 
       name="password"
       onChange={handleChange}/>
       </div>
-     <div className="mb-3 form-check">
+     <div className="mb-3 mt-4 form-check">
       <input type="checkbox" className="form-check-input" />
      <label className="form-check-label" htmlFor="exampleCheck1">Accepter la condition générale</label>
     </div>

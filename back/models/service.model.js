@@ -9,7 +9,7 @@ const serviceSchema = mongoose.Schema(
       required: true
     },
     prix: {
-      type: float, 
+      type: Number, 
       required: true,
       unique: true
     },

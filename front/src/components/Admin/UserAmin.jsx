@@ -69,7 +69,6 @@ export default function UserAdmin() {
 
   }
 
-
   return (
     <View>
       <Text>UserAdmin</Text>

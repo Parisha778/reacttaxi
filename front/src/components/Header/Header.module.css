@@ -3,7 +3,7 @@
 }
 .header{
     margin-bottom: 180px;
-    width: 120%;
+    width: 100%
 }
 .logoimage, .navigation{
     flex-direction: row;     

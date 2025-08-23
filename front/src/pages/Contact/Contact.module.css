@@ -1,6 +1,7 @@
 .containeur{
         width: 100%;
-        margin: auto;        
+        margin: auto;    
+        margin-top: 80px;    
         display:block;
         justify-items: center;
       }

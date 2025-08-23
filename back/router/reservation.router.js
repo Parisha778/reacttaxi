@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // Importer le controller
-const ServiceController = require('../controllers/reservation.controller');
+const ReservationController = require('../controllers/reservation.controller.js');
 
 
 //GET = Récuperer ( lire )

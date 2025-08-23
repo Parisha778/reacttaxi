@@ -18,9 +18,10 @@ import { AuthContext } from '../../utilis/context/AuthContext.jsx'
   }
   return (
     <>
-    <div className="ms-5">
+    <div className='d-flex justify-content-center'>
+    <div className="ms-5 mt-5 ">
     <form onSubmit={handleSubmit}>
-      <div className="mb-3">
+      <div className="mb-4">
       <label htmlFor="exampleInputEmail1" className="form-label">Addresse mail</label>
       <input type="email"
       name ="email"
@@ -37,7 +38,8 @@ import { AuthContext } from '../../utilis/context/AuthContext.jsx'
    <button type="submit" className="btn btn-primary"> Connecter</button>
   </form>
   <div className='mt-4'>
-  <Link to='/register'> Êtes vous déja enregisté ? </Link>
+  <Link to='/inscription'> Êtes vous déja enregisté ? </Link>
+  </div>
   </div>
   </div>
     </>

@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const ENV = require('../config/env')
-const UsersModel = require('./models/user.model');
+const ENV = require('../config/env.js')
+const UsersModel = require('../models/user.model.js');
 
 const register = async (req, res) => {
  
