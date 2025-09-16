@@ -17,7 +17,17 @@ connectMongoDB(ENV.MONGO_URI_ONLINE, ENV.DB_NAME);
 // MIDDLEWARES
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors())
+app.use(cors({
+  orgin: ["http://localhost:5173", "http://localhost:5174"],
+  credentials: false,
+}));
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+//   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+//   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+//   res.setHeader("Access-Control-Allow-Credentials", false);
+//   return next();
+// });
 
 // URLS API PREFIX
 app.use("/api/user", userRouter);

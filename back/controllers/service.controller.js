@@ -32,7 +32,6 @@ const service = async(req,res) =>{
         return res.status(500).json(error.message)
     }
 }
-
     const deleteService = async (req, res, next) => {
   try{   
     const service = await ServiceModel.findById(req.params.id);
@@ -50,9 +49,9 @@ const service = async(req,res) =>{
     const updateService = async (req, res, next) => {
     try{
         
-        const user = await ServiceModel.findById(req.params.id);
+        const service = await ServiceModel.findById(req.params.id);
         
-        if(!user) return res.status(404).json("service not found !");
+        if(!service) return res.status(404).json("service not found !");
         const serviceUpdated = await Model.findByIdAndUpdate(
         req.params.id,
         { $set: req.body },
@@ -60,7 +59,7 @@ const service = async(req,res) =>{
         )
         res.status(200).json({
         message: "Service updated",
-        userUpdated
+        serviceUpdated
         })
 
     }catch(error){

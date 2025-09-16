@@ -1,7 +1,8 @@
 import React ,{ useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link,useNavigate,useParams } from 'react-router';
+import { Link,useNavigate } from 'react-router';
 import {BiHome, BiPen,BiMinusCircle} from 'react-icons/bi';
+import { Navigate } from 'react-router';
 //CSS
 import styles from './Reservation.module.css';
 
@@ -11,14 +12,15 @@ function Service() {
     const [allService, setAllService] = useState('');
     const [prix, setPrix] = useState('');
     const [confirmation, setConfirmation]= useState(false);
-    const { id } = useParams();
+
     const navigate = useNavigate();
 
     useEffect(()=> {
       const fetchService= async() =>{
         try {
-          const {data}= await axios.get('http://localhost:8000/api/service/all');
-          setAllService(data);
+          const {data , status }= await axios.get('http://localhost:8000/api/service/all');
+         console.log("A", data);
+         if(status === 200) setAllService(data);
         } catch (error) {
           console.error('Erreur lors de la récupération du service:',error.message);
         }
@@ -29,6 +31,8 @@ function Service() {
     const handleSubmit = async (event) =>{
       event.preventDefault();
       try {
+        console.log('SERVICE => ', service, prix);
+        
         const response = await axios.post('http://localhost:8000/api/service/add',{
           service,
           prix,
@@ -40,36 +44,35 @@ function Service() {
       } catch (error) {
         console.error('Erreur lors de l ajout du service:', error.message);
       }
+    }
 
-      useEffect(() => {
-      const fetchService = async () =>{
-        try {
-          const response = await axios.get(`http://localhost:8000/api/service/:id`);
-          setService(response.data);
-        } catch (error) {
-          console.error(error.message);
-        }
-      };
-      fetchService();
-    },[id]);
+    // useEffect(() => {
+    //   const fetchService = async () =>{
+    //     try {
+    //       const response = await axios.get(`http://localhost:8000/api/service/:id`);
+    //       setService(response.data);
+    //     } catch (error) {
+    //       console.error(error.message);
+    //     }
+    //   };
+    //   fetchService();
+    // },[id])
 
-    const handleUpdate = async (id) => {
-      try {
-        const response = await axios.put(`http://localhost://8000/api/service/update/${id}`, {service,prix});
-        if (response.status === 200) {
-          fetchServices();
-        }
-      } catch (error) {
-        console.error('Error lors de la mise à jour:', error);
-      }
-    };
+    // const handleUpdate = async (id) => {
+    //   try {
+    //     const response = await axios.put(`http://localhost://8000/api/service/update/${id}`, {service,prix});
+    //     if (response.status === 200) {
+    //       navigate(`/service/${id}`);
+    //     }
+    //   } catch (error) {
+    //     console.error('Error lors de la mise à jour:', error);
+    //   }
+    // };
      
     const deleteService = async (id) => {
       try {
         const response = await axios.delete(`http://localhost:8000/api/service/delete/${id}`);
-        if (response.status=== 200) {
-          fetchService();
-        }
+        if (response.status=== 200) navigate('/');        
       } catch (error) {
         console.error('Erreur lors de la suppression:', error);
       }
@@ -107,23 +110,17 @@ function Service() {
     </tr>
    </thead>
    <tbody>
-     {allService&&allService.map((item)=>(
+     {allService && allService.map((item)=>(
       <tr key={item._id}>
         <td>{item.service}</td>
         <td>{item.prix}</td>
         <td>
-        <button onClick={() =>
-          handleUpdate(item._id)}>
-          <Link to={'/service/update/${service._id}'} className={styles.item}>
+          <Link to={`/service/update/${item._id}`} className={styles.item}>
                <BiPen className={styles.icon}/> 
           </Link>
-        </button>
-        <button onClick={() =>
-          deleteService(item._id)}>
-          <Link to={'/service/delete/${service._id}'} className={styles.item}>
-               <BiMinusCircle className={styles.icon}/>
-          </Link>
-        </button>
+          <button onClick={() => deleteService(item._id)}>
+                <BiMinusCircle className={styles.icon}/>
+          </button>
         </td>
       </tr> 
     ))}    

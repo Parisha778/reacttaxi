@@ -1,6 +1,6 @@
 import React,{ useContext, useState} from 'react';
 import { Link } from 'react-router';
-import { AuthContext } from '../../utilis/context/AuthContext.jsx'
+import { AuthContext } from '../../utilis/context/AuthContext.jsx';
 
   const Connexion = () => {
 
@@ -16,6 +16,7 @@ import { AuthContext } from '../../utilis/context/AuthContext.jsx'
     event.preventDefault();
     login(user)
   }
+  
   return (
     <>
     <div className='d-flex justify-content-center'>

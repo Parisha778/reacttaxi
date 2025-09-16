@@ -9,7 +9,7 @@ import styles from './Calendrier.module.css';
 import {BiHome, BiCalendar} from 'react-icons/bi'
 
 
-function CustomInput({value,onclick}){
+function CustomInput({value,onClick}){
 return(
   <div>
   

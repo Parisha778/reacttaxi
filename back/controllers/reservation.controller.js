@@ -1,10 +1,9 @@
-const CourseModel = require('../models/reservation.model.js')
+const ReservationModel = require('../models/reservation.model.js')
 
 const reservation = async(req,res) =>{
     try {
-        const service = await reservationModel.create({
-            ...req.body,
-        });
+        const reservation = await ReservationModel.create(req.body,
+        );
         return res.status(201).json("Reservation has been created !",service);
     } catch (error) {
         return res.status(500).json(error.message)      
@@ -12,7 +11,7 @@ const reservation = async(req,res) =>{
 }
     const getAllReservations = async (req,res)=>{
     try {
-        const reservations = await reservationModel.find();
+        const reservations = await ReservationModel.find();
         res.status(200).json(reservations);
 
     } catch (error) {
@@ -22,9 +21,9 @@ const reservation = async(req,res) =>{
 }
     const getReservationById = async (req, res) => {
     try{
-        const result = await reservationModel.findById(req.params.id);
+        const result = await ReservationModel.findById(req.params.id);
             
-        if(!course) return res.status(404).json("Reservation not found !")
+        if(!reservation) return res.status(404).json("Reservation not found !")
         return res.status(200).json(reservation)
 
     }catch(error){  
@@ -34,7 +33,7 @@ const reservation = async(req,res) =>{
 
     const deleteReservation = async (req, res, next) => {
   try{   
-    const reservation = await reservationModel.findById(req.params.id);
+    const reservation = await ReservationModel.findById(req.params.id);
     
     if (!reservation) return res.status(404).json("Reservation not found.")
     
@@ -49,7 +48,7 @@ const reservation = async(req,res) =>{
     const updateReservation = async (req, res, next) => {
     try{
         
-        const reservation = await reservationModel.findById(req.params.id);
+        const reservation = await ReservationModel.findById(req.params.id);
         
         if(!reservation) return res.status(404).json("reservation not found !");
         const reservationUpdated = await Model.findByIdAndUpdate(
@@ -59,7 +58,7 @@ const reservation = async(req,res) =>{
         )
         res.status(200).json({
         message: "Reservation updated",
-        userUpdated
+        reservationUpdated
         })
 
     }catch(error){

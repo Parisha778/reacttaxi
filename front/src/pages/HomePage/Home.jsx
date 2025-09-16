@@ -1,5 +1,6 @@
 import React from 'react';
 import Booking from '../../components/Booking/Booking';
+
 //IMAGE
 
 import Taxi from '../../assets/images/mototaxi.jpeg';
